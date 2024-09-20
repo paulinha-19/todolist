@@ -1,7 +1,7 @@
 import { HttpStatusCode } from "axios";
 import { connectMongo } from "@/lib/mongodb";
 import { NextRequest, NextResponse } from "next/server";
-import Todo from "@/models/todo";
+import Todo from "@/models/Todo";
 
 // Function to handle POST requests
 export async function POST(req: NextRequest) {
