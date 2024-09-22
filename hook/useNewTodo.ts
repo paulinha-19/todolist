@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { todoSchema } from "@/schema/todo-schema";
 import { postTodo } from "@/lib/todoApi";
-import useTodo from "@/hook/useTodo";
+import useTodo from "./useTodo";
 
 export function useNewTodo() {
   const [description, setDescription] = useState("");
