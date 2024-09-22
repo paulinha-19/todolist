@@ -1,0 +1,85 @@
+@import "./variables.module.scss";
+
+// background color behind modal
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-color-overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+// for desktop
+.modal {
+  background-color: $background-color-light;
+  box-shadow: $box-shadow-1;
+  border-radius: $border-radius-16;
+  padding: $spacing-12 $spacing-32 $spacing-32 $spacing-32;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 1;
+  z-index: 1001;
+
+  // for mobile
+  @media (max-width: 480px) {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    align-self: flex-start;
+  }
+}
+
+// action buttons inside the modal
+.containerContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalActions {
+  display: flex;
+  gap: $gap-16;
+  margin-top: $spacing-14;
+
+  button {
+    width: 185px; // width for desktop
+    @media (max-width: 480px) {
+      width: 100%; // width for mobile
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+.containerText {
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.modalTitle {
+  font-size: $font-size-24;
+  font-weight: $font-weight-500;
+  letter-spacing: $letter-spacing-0;
+  color: $primary-color;
+}
+
+.modalSubtitle {
+  font-size: $font-size-16;
+  font-weight: $font-weight-400;
+  line-height: $line-height-24;
+  color: #0000008a;
+  letter-spacing: $letter-spacing-0;
+  margin-top: $spacing-32;
+}
