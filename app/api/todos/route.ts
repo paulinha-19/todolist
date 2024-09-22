@@ -21,3 +21,27 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+
+// Function to handle GET requests (retrieve all todos)
+export async function GET() {
+  await connectMongo();
+  try {
+    const todos = await Todos.find();
+    console.log("todos GET", todos);
+    if (todos.length === 0) {
+      return NextResponse.json(
+        { data: todos, message: "Todo empty" },
+        { status: HttpStatusCode.Ok }
+      );
+    }
+    return NextResponse.json(
+      { data: todos, message: "All recovered successfully" },
+      { status: HttpStatusCode.Ok }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { error: error, message: "Error retrieving all" },
+      { status: HttpStatusCode.InternalServerError }
+    );
+  }
+}
