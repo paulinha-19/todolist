@@ -1,11 +1,11 @@
-import mongoose, { Document } from "mongoose";
+import mongoose, { Document, Schema } from "mongoose";
 
 export interface ITodo extends Document {
-    description: string;
-    completed: boolean;
+  description: string;
+  completed: boolean;
 }
 
-const TodoSchema = new mongoose.Schema(
+const todosSchema = new Schema(
   {
     description: {
       type: String,
@@ -13,7 +13,7 @@ const TodoSchema = new mongoose.Schema(
     },
     completed: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   {
@@ -22,4 +22,5 @@ const TodoSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.models?.Todo || mongoose.model<ITodo>("Todo", TodoSchema);
+// export default mongoose.model("todos", todosSchema);
+export const Todos = mongoose.models.todos || mongoose.model("todos", todosSchema);
