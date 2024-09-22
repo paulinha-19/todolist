@@ -6,7 +6,7 @@ interface HeaderProps {
   username: string;
 }
 
-export const Header = ({ username }: HeaderProps) => {
+export default function Header ({ username }: HeaderProps) {
   const formattedDate = FormattedDate();
 
   return (

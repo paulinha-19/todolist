@@ -1,0 +1,38 @@
+@import "./variables.module.scss";
+@import "./mixins.module.scss";
+
+.button {
+  @include flex-center();
+  padding: $spacing-10 $spacing-16;
+  @include border-radius($border-radius-8);
+  cursor: pointer;
+  @include transition(background-color);
+
+  height: 51px;
+
+  &.primary {
+    background: linear-gradient(90deg, #0796d3 0%, #53c0f0 68.65%);
+    color: $background-color-light;
+    border: 1px solid transparent;
+  }
+
+  &.secondary {
+    background-color: $button-color-secondary;
+    font-weight: $font-weight-400;
+    color: $primary-color;
+    border: none;
+  }
+
+  &.error {
+    background: linear-gradient(90deg, #d30707 0%, #f05353 68.65%);
+    font-weight: $font-weight-500;
+    color: $background-color-light;
+    border: none;
+  }
+
+  &:disabled {
+    background-color: #d7dde9;
+    color: #888;
+    cursor: not-allowed;
+  }
+}
