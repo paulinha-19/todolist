@@ -1,6 +1,40 @@
 # TodoList App
 Este é um projeto de uma aplicação de lista de tarefas (TodoList) desenvolvida com Next.js, TypeScript, MongoDB Atlas e Mongoose. A aplicação permite criar, editar, completar e excluir tarefas, com estados de carregamento, validações e exibição de notificações. Além disso, o design é responsivo, adaptado tanto para desktop quanto para dispositivos móveis.
 
+## Telas
+![image](https://github.com/user-attachments/assets/5e3b77b7-5f46-40f3-9a44-1a8bc882ac38)
+
+
+![image](https://github.com/user-attachments/assets/31e53c8a-c8ae-48e6-bd06-14662ee0d3a9)
+
+
+![image](https://github.com/user-attachments/assets/9344c465-6501-4187-893d-4c89b81d9088)
+
+
+![image](https://github.com/user-attachments/assets/f88fa51e-1bb9-43c1-a152-8523e8230397)
+
+
+![image](https://github.com/user-attachments/assets/f3ca0be7-0113-4772-bced-3c5391d817fd)
+
+
+![image](https://github.com/user-attachments/assets/1b6eddcd-9dc0-4de9-b965-36d583fa19f8)
+
+
+![image](https://github.com/user-attachments/assets/c3744756-7967-4481-b59b-3c9aabd35b72)
+
+
+![image](https://github.com/user-attachments/assets/41488871-3055-44b6-8934-3a9d7f756a5e)
+
+
+![image](https://github.com/user-attachments/assets/1b5a8d25-da4b-48f5-9207-de7f7cb4b4bc)
+
+
+
+![image](https://github.com/user-attachments/assets/3b61c75e-aed7-4873-82e1-e9d661a9f635)
+
+
+
+
 ## Funcionalidades
 Adicionar uma nova tarefa.
 
