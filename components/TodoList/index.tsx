@@ -3,7 +3,7 @@
 import useTodo from "@/hook/useTodo";
 import TodoItems from "../TodoItem";
 import styles from "@/styles/TodoList.module.scss";
-import LoadingOverlay from "../LoadingOverlay";
+import { Todo } from "@/lib/todoApi";
 
 export default function TodoList() {
   const { todos, loading } = useTodo();
@@ -13,8 +13,8 @@ export default function TodoList() {
   }
 
   // Check if there are pending or completed todos
-  const pendingTodos = todos.filter((todo) => !todo.completed);
-  const completedTodos = todos.filter((todo) => todo.completed);
+  const pendingTodos = todos.filter((todo: Todo) => !todo.completed);
+  const completedTodos = todos.filter((todo: Todo) => todo.completed);
 
   return (
     <div className={styles.todolistContainer}>
