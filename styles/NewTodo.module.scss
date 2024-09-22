@@ -1,0 +1,53 @@
+@import "./variables.module.scss";
+
+.notificationContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  width: 300px;
+}
+
+.buttonAddContainer {
+  display: flex;
+  margin-top: $spacing-24;
+  button {
+    width: 450px;
+    @media (max-width: 880px) {
+      margin: 0px $spacing-24;
+      width: 880px;
+    }
+  }
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.labelAddTodo {
+  font-size: $font-size-16;
+  font-weight: $font-weight-400;
+  line-height: 19.36px;
+  letter-spacing: $letter-spacing-0;
+  color: $primary-color;
+  margin-bottom: $spacing-10;
+}
+
+.input {
+  padding: $spacing-16;
+  border-radius: $border-radius-8;
+  border: 1px solid $contrast-color-main;
+  margin-bottom: $spacing-16;
+  font-size: $font-size-16;
+  font-weight: $font-weight-400;
+  color: #0000008f;
+
+  &:focus {
+    outline: 1px solid $border-input-focus;
+  }
+}
