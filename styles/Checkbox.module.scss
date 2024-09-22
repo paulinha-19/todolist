@@ -1,0 +1,46 @@
+@import "./variables.module.scss";
+@import "./mixins.module.scss";
+
+.checkboxWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  @include border-radius(4px);
+  border: 1px solid $contrast-color-main;
+  background-color: $background-color-light;
+  @include flex-center();
+  cursor: pointer;
+  @include transition(border 0.2s, background-color 0.2s);
+
+  &:hover {
+    border: 1px solid #b0bbd1;
+    background-color: $background-color-secondary;
+  }
+
+  &:checked {
+    border: 1px solid #0796d3;
+    background-color: #a0dcf6;
+  }
+}
+
+.checkIcon {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
+.checkbox:checked + .checkIcon {
+  display: block;
+}
