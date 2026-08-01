@@ -167,7 +167,7 @@ MongoDB Atlas configurado com uma URI de conexão
 
 2. Instale as dependências: ```npm install```
    
-3. Crie um arquivo .env.local e .env na raiz do projeto e adicione a variável de ambiente com a URI de conexão do MongoDB Atlas: ```MONGODB_URI = mongodb+srv://dbTodo:t1iRd5N6JeobyxPv@cluster0.7hs9k.mongodb.net/```
+3. Crie um arquivo .env.local e .env na raiz do projeto e adicione a variável de ambiente com a URI de conexão do MongoDB Atlas: ```MONGODB_URI = mongodb+srv://<username>:<password>@<cluster-url>/<database-name>?```
    
 4. Execute o projeto: ```npm run dev```
 
