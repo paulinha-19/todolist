@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Header username="Marcus" />
         {children}
       </body>
+      <Script src="https://t.contentsquare.net/uxa/dd1a8ff2ab2fd.js" defer strategy="afterInteractive" />
     </html>
   );
 }
